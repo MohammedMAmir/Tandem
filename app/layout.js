@@ -24,12 +24,12 @@ export default function RootLayout({ children }) {
 
   const header = (
     <header className="p-4 sm:p-8 flex items-center justify-between gap-4">
-      <h1 className={'text-base sm:text-lg ' + fugaz.className}>Tandem</h1>
+      <h1 className={'textGradient text-base sm:text-lg ' + fugaz.className}>Tandem</h1>
     </header>
   )
 
   const footer = (
-    <footer>
+    <footer className="p-4 sm:p-8 ">
       footer
     </footer>
   )
@@ -37,8 +37,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={'w-full max-w-[1000px] mx-auto text-sm sm:text-base min-h-screen flex flex-col '}
-      >
+        className={`w-full max-w-[1000px] mx-auto text-sm sm:text-base 
+          min-h-screen flex flex-col text-slate-800`}>
         {header}
         {children}
         {footer}
