@@ -2,8 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-.textGradient{
-    background: -webkit-linear-gradient(#1C3F60, #5392CD);
+.textGradientPrime{
+    background: -webkit-linear-gradient(#4B2C79, #8D7DFD);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.textGradientSec{
+    background: -webkit-linear-gradient(#BCA0DC, #F4F0F7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

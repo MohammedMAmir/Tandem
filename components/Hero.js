@@ -7,8 +7,16 @@ const fugaz = Fugaz_One({
 
 export default function Hero() {
   return (
-    <div className='py-10 sm:py-14 md:py-20'>
-      <h1 className={'text-5xl sm:text-6xl md:textxl text-center ' + fugaz.className}><span className='textGradient '>Tandem</span> keeping partners in sync, <span className='textGradient '>no matter the distance</span></h1>
+    <div className='py-4 md:py-10 flex flex-col gap-4 sm:gap-8'>
+      <h1 className={'text-5xl sm:text-6xl md:textxl text-center ' + fugaz.className}>
+        <span className='textGradientPrime '>Tandem</span> keeping partners in step, 
+        <span className='textGradientPrime '> no matter the distance</span></h1>
+        <p className="text-lg sm:text-xl md:text2xl text-center w-full mx-auto 
+        max-width-[600px]">An all-in-one couple's app to sync 
+        <span className='font-semibold'> calendars</span>, <span className='font-semibold'> 
+        lists</span>, <span className='font-semibold'>notes</span>, 
+        <span className='font-semibold'> photos</span>, and 
+        <span className='font-semibold'> more</span>!</p>
     </div>
   )
 }
