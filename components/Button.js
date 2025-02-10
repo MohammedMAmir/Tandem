@@ -4,12 +4,12 @@ import React from 'react';
 const fugaz = Fugaz_One({subsets: ["latin"], weight: ['400']});
 
 export default function Button(props) {
-    const { text, dark } = props
+    const { text, dark, primary } = props
 
     return (
     <button className={`rounded-full overflow-hidden border-2 
-        duration-200 hover:opacity-60 border-solid border-indigo-600 `
-     + (dark ? ' text-white bg-[#8D78DD] ' : ' text-indigo-600')} >
+        duration-200 hover:opacity-60 border-solid lightButton `
+     + (primary ? ' lightPrimeButton' : ' lightSecButton')} >
         <p className={'px-6 sm:px-10 whitespace-nowrap py-2 sm:py-3' 
             + fugaz.className}>{text}</p>
     </button>

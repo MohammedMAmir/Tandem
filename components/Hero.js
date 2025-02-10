@@ -20,7 +20,7 @@ export default function Hero() {
         <span className='font-semibold'> more</span>!</p>
         <div className='grid grid-cols-2 gap-4'>
           <Button text="Sign Up" />
-          <Button text="Login" dark />
+          <Button text="Login" primary />
         </div>
     </div>
   )
