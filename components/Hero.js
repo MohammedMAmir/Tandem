@@ -13,7 +13,7 @@ export default function Hero() {
         <span className='textGradientPrime '>Tandem</span> keeping partners in step, 
         <span className='textGradientPrime '> no matter the distance</span></h1>
         <p className="text-lg sm:text-xl md:text2xl text-center w-full mx-auto 
-        max-width-[600px]">An all-in-one couple's app to sync 
+        max-width-[600px]">An all-in-one couple's app to share 
         <span className='font-semibold'> calendars</span>, <span className='font-semibold'> 
         lists</span>, <span className='font-semibold'>notes</span>, 
         <span className='font-semibold'> photos</span>, and 
