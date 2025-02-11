@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root{
-    --light-prime: #915aef;
+    --light-prime: #5a21f6;
     --light-secondary: #BCA0DC;
     --light-accent: #F4C2C2;
     --light-background: #F4F0F7;
@@ -16,7 +16,7 @@
 }
 
 .textGradientPrime{
-    background: -webkit-linear-gradient(#7b3bea, #977bc8);
+    background: -webkit-linear-gradient(#400fc4, #6d39ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
