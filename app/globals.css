@@ -4,6 +4,7 @@
 
 :root{
     --light-prime: #5a21f6;
+    --light-bold: #380dac;
     --light-secondary: #BCA0DC;
     --light-accent: hsl(0, 69%, 86%);
     --light-background: #F8F6FA;
@@ -38,4 +39,15 @@
 
 .lightSecButton{
     color: var(--light-prime);
+}
+
+.lightInput{
+    border: solid 2px;
+    border-color: var(--light-secondary);
+    border-radius: 24px;
+    outline: none;
+}
+
+.lightInput:hover, .lightInput:focus{
+    border-color: var(--light-prime);
 }

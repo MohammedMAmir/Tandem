@@ -1,6 +1,7 @@
 import React from 'react'
 import { Fugaz_One } from 'next/font/google';
 import Button from './Button';
+import Calendar from './Calendar';
 
 const fugaz = Fugaz_One({
   subsets: ["latin"], weight: ['400'],
@@ -18,10 +19,11 @@ export default function Hero() {
         lists</span>, <span className='font-semibold'>notes</span>, 
         <span className='font-semibold'> photos</span>, and 
         <span className='font-semibold'> more</span>!</p>
-        <div className='grid grid-cols-2 gap-4'>
+        <div className='grid grid-cols-2 gap-4 w-fit mx-auto'>
           <Button text="Sign Up" />
           <Button text="Login" primary />
         </div>
+        <Calendar />
     </div>
   )
 }
