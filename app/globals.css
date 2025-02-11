@@ -5,8 +5,8 @@
 :root{
     --light-prime: #5a21f6;
     --light-secondary: #BCA0DC;
-    --light-accent: #F4C2C2;
-    --light-background: #F4F0F7;
+    --light-accent: hsl(0, 69%, 86%);
+    --light-background: #F8F6FA;
     --light-text: #3C3C3C;
     --dark-prime: #A489D4; 
     --dark-secondary: #7A5FA4;
