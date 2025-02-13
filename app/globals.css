@@ -5,11 +5,11 @@
 :root{
     --light-prime: #5a21f6;
     --light-bold: #380dac;
-    --light-secondary: #BCA0DC;
+    --light-secondary: #e5d3f979;
     --light-accent: hsl(0, 69%, 86%);
     --light-background: #F8F6FA;
     --light-text: #3C3C3C;
-    --dark-prime: #A489D4; 
+    --dark-prime: #c7a8fd; 
     --dark-secondary: #7A5FA4;
     --dark-accent: #E6A8D7;
     --dark-background: #1B1221;
