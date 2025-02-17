@@ -11,6 +11,14 @@ export default function Dashboard() {
     time_remaining: '13:14:26',
     date: (new Date()).toDateString()
   }
+
+  const mood = {
+    '$*@#$': '🤬',
+    'Sad': '😢',
+    'Chilling': '😶',
+    'Good': '😊',
+    'Elated': '😁',
+  }
   return (
     <div className=' flex flex-col flex-1 gap-10 sm:gap-14 md:gap-20 '>
       <div className='grid grid-cols-1 sm:grid-cols-3 bg-[var(--light-secondary)]
@@ -27,6 +35,7 @@ export default function Dashboard() {
       <h4 className={'text-5xl sm:text-6xl md:text-7xl text-center ' + fugaz.className}>
         How do you <span className="textGradientPrime">feel</span> today?
       </h4>
+      <div className='grid grid-cols-2 md:grid-cold-5 gap-4 '></div>
     </div>
   )
 }
