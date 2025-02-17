@@ -34,6 +34,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <meta charSet="UTF-8"/>
       <body
         className={`w-full max-w-[1000px] mx-auto text-sm sm:text-base 
           min-h-screen flex flex-col text-slate-800 ` + openSans.className}>

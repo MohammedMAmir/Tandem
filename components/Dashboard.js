@@ -12,20 +12,21 @@ export default function Dashboard() {
     date: (new Date()).toDateString()
   }
 
-  const mood = {
+  const moods = {
     '$*@#$': '🤬',
     'Sad': '😢',
     'Chilling': '😶',
     'Good': '😊',
     'Elated': '😁',
   }
+
   return (
     <div className=' flex flex-col flex-1 gap-10 sm:gap-14 md:gap-20 '>
-      <div className='grid grid-cols-1 sm:grid-cols-3 bg-[var(--light-secondary)]
+      <div className='p-4 gap-4 grid grid-cols-3 bg-[var(--light-secondary)]
       text-[var(--light-prime)] rounded-lg'>
         {Object.keys(statuses).map((status, statusIndex) => {
           return(
-            <div key={statusIndex} className='p-4 flex flex-col gap-1 sm:gap-2'>
+            <div key={statusIndex} className='flex flex-col gap-1 sm:gap-2'>
               <p className = 'font-medium uppercase text-xs sm:text-sm '>{status.replaceAll('_', ' ')}</p>
               <p className={'text-base sm:text-lg ' + fugaz.className}>{statuses[status]}</p>
             </div>
@@ -35,7 +36,14 @@ export default function Dashboard() {
       <h4 className={'text-5xl sm:text-6xl md:text-7xl text-center ' + fugaz.className}>
         How do you <span className="textGradientPrime">feel</span> today?
       </h4>
-      <div className='grid grid-cols-2 md:grid-cold-5 gap-4 '></div>
+      <div className='grid grid-cols-2 md:grid-col-5 gap-4 '>
+        {Object.keys(moods).map((mood, moodIndex) => {
+          return(<button className={' '+ (moodIndex === (Object.keys(moods).length - 1) ? 'col-span-2' : ' ' )} key={moodIndex}>
+            <p>{mood}</p>
+            <p>{moods[mood]}</p>
+          </button>)
+        })}
+      </div>
     </div>
   )
 }
