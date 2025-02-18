@@ -6,14 +6,14 @@
     --light-prime: #5a21f6;
     --light-bold: #380dac;
     --light-secondary: #e5d3f979;
-    --light-accent: hsl(0, 69%, 86%);
+    --light-accent: #d3cbff;
     --light-background: #F8F6FA;
     --light-text: #3C3C3C;
     --dark-prime: #c7a8fd; 
     --dark-secondary: #7A5FA4;
-    --dark-accent: #E6A8D7;
-    --dark-background: #1B1221;
-    --dark-text: #E3D9F3;
+    --dark-accent: #a18eff;
+    --dark-background: #1c1530;
+    --dark-text: #e8dbff;
 }
 
 .textGradientPrime{
@@ -50,4 +50,13 @@
 
 .lightInput:hover, .lightInput:focus{
     border-color: var(--light-prime);
+}
+
+.purpleShadow{
+    box-shadow: 3px 3px 3px 1px var(--light-accent);
+}
+
+.purpleShadow:hover{
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px 1px 1px var(--light-accent);
 }
