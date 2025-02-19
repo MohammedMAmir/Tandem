@@ -36,11 +36,13 @@ export default function Dashboard() {
       <h4 className={'text-5xl sm:text-6xl md:text-7xl text-center ' + fugaz.className}>
         How do you <span className="textGradientPrime">feel</span> today?
       </h4>
-      <div className='grid grid-cols-2 md:grid-col-5 gap-4 '>
+      <div className='grid grid-cols-2 sm:grid-cols-5 gap-4 '>
         {Object.keys(moods).map((mood, moodIndex) => {
-          return(<button className={' '+ (moodIndex === (Object.keys(moods).length - 1) ? 'col-span-2' : ' ' )} key={moodIndex}>
-            <p>{mood}</p>
-            <p>{moods[mood]}</p>
+          return(<button className={`p-4 rounded-lg purpleShadow duration-200 bg-[var(--light-secondary)]
+             hover:bg-[var(--light-accent)] `+ (moodIndex === (Object.keys(moods).length - 1) ?
+           'col-span-2 sm:col-span-1' : ' ' )} key={moodIndex}>
+            <p className={'text-5xl sm:text-6xl md:7xl ' + fugaz.className}>{moods[mood]}</p>
+            <p className={'text-[var(--light-prime)] ' + fugaz.className}>{mood}</p>
           </button>)
         })}
       </div>
