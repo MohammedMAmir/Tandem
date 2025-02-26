@@ -1,4 +1,4 @@
-import { Fugaz_One, Open_Sans } from "next/font/google";
+import { Fugaz_One, Open_Sans, Bellota, Sansita_Swashed} from "next/font/google";
 import "./globals.css";
 
 const openSans = Open_Sans({
@@ -7,7 +7,15 @@ const openSans = Open_Sans({
 });
 
 const fugaz = Fugaz_One({
-  subsets: ["latin"], weight: ['400'],
+  subsets: ["latin"], weight: ['400'], 
+});
+
+const bellota = Bellota({
+  subsets: ["latin"], weight: ['700'], style: ['italic'],
+});
+
+const sansita = Sansita_Swashed({
+  subsets: ["latin"], weight: ['700'],
 });
 
 export const metadata = {
@@ -19,8 +27,9 @@ export default function RootLayout({ children }) {
 
   const header = (
     <header className="p-3 sm:p-8 flex items-center justify-between gap-4">
-      <div className="w-40 sm:w-60 h-auto flex items-center justify-center">
-        <img src='tandem_text_light1.png' className="object-contain w-full"></img>
+      <div className="w-8 sm:w-10 h-auto flex flex-end gap-1">
+        <img src='Tandem2.png' className="object-contain w-full"></img>
+        <h1 className={"text-2xl sm:text-3xl textGradientPrime " + sansita.className}>Tandem</h1>
       </div>
       <div className="flex items-center justify-between ">
       PLACEHOLDER
