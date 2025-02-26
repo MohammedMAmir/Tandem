@@ -1,4 +1,4 @@
-import { Fugaz_One } from 'next/font/google'
+import { Fugaz_One, } from 'next/font/google'
 import React from 'react'
 import Calendar from './Calendar';
 
