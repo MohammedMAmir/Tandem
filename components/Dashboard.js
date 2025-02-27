@@ -1,10 +1,15 @@
-import { Fugaz_One, } from 'next/font/google'
+import { Fugaz_One, Open_Sans, Sansita_Swashed} from "next/font/google";
 import React from 'react'
 import Calendar from './Calendar';
 
 const fugaz = Fugaz_One({
   subsets: ["latin"], weight: ['400'],
 });
+
+const sansita = Sansita_Swashed({
+  subsets: ["latin"], weight: ['700'],
+});
+
 
 export default function Dashboard() {
   const statuses = {
@@ -30,13 +35,13 @@ export default function Dashboard() {
           return(
             <div key={statusIndex} className='flex flex-col gap-1 sm:gap-2'>
               <p className = 'font-medium uppercase text-xs sm:text-sm '>{status.replaceAll('_', ' ')}</p>
-              <p className={'text-base sm:text-lg ' + fugaz.className}>{statuses[status]}</p>
+              <p className={'text-base sm:text-lg ' + sansita.className}>{statuses[status]}</p>
             </div>
           )
         })}
       </div>
 
-      <h4 className={'text-5xl sm:text-6xl md:text-7xl text-center ' + fugaz.className}>
+      <h4 className={'text-5xl sm:text-6xl md:text-7xl text-center ' + sansita.className}>
         How do you <span className="textGradientPrime">feel</span> today?
       </h4>
 
@@ -47,8 +52,8 @@ export default function Dashboard() {
              hover:bg-[var(--light-accent)] text-center flex flex-col items-center gap-2
              `+ (moodIndex === (Object.keys(moods).length - 1) ?
            'col-span-2 sm:col-span-1' : ' ' )} key={moodIndex}>
-            <p className={'text-4xl sm:text-5xl md:text-6xl ' + fugaz.className}>{moods[mood]}</p>
-            <p className={'text-[var(--light-prime)] ' + fugaz.className}>{mood}</p>
+            <p className={'text-4xl sm:text-5xl md:text-6xl ' + sansita.className}>{moods[mood]}</p>
+            <p className={'text-[var(--light-prime)] ' + sansita.className}>{mood}</p>
           </button>)
         })}
       </div>
