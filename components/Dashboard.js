@@ -34,7 +34,7 @@ export default function Dashboard() {
         {Object.keys(statuses).map((status, statusIndex) => {
           return(
             <div key={statusIndex} className='flex flex-col gap-1 sm:gap-2'>
-              <p className = 'font-medium uppercase text-xs sm:text-sm '>{status.replaceAll('_', ' ')}</p>
+              <p className = 'font-medium uppercase text-sm sm:text-md '>{status.replaceAll('_', ' ')}</p>
               <p className={'text-base sm:text-lg ' + sansita.className}>{statuses[status]}</p>
             </div>
           )
