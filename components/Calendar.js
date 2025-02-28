@@ -1,4 +1,11 @@
 import React from 'react'
+import { gradients } from '@/utils'
+import { baseRating } from '@/utils'
+
+const data =  {
+  "15": 2, "16": 4, "17": 1, "18": 3, "19": 5,
+  "20": 2, "21": 4, "22": 1, "23": 3, "24": 5,
+}
 
 const months = {
   'January': 'Jan',
@@ -16,11 +23,15 @@ const months = {
 }
 
 const today = new Date()
+
 const dayList = ['Sunday', 'Monday', 
   'Tuesday', 'Wednesday', 'Thursday',
   'Friday', 'Saturday']
 
-export default function Calendar() {
+export default function Calendar(props) {
+
+  const { demo } = props
+
   //Initialize a year
   const year = 2025
   const month = 'February'
@@ -41,10 +52,10 @@ export default function Calendar() {
   (daysToDisplay % 7 ? 1 : 0)
 
   return (
-    <div className='flex flex-col overflow-hidden gap-1'>
+    <div className='flex flex-col overflow-hidden gap-2 '>
       {[...Array(numRows).keys()].map((row, rowIndex) => {
         return (
-          <div key={rowIndex} className='grid grid-cols-7 gap-1'>
+          <div key={rowIndex} className='grid grid-cols-7 gap-2 '>
             {dayList.map((dayWeek, dayWeekIndex) => {
               
               // Calculate which day each date falls on
@@ -57,22 +68,26 @@ export default function Calendar() {
               true
               
               let isToday = dayIndex === today.getDate()
-              console.log(isToday)
               
               if (!dayDisplay) {
                 return (<div className='bg-white' key={dayWeekIndex} />)
               }
 
+              let color = demo ? 
+              gradients.indigo[baseRating[dayIndex]] : 
+              dayIndex in data ? 
+                gradients.indigo[data[dayIndex]] : 
+                'white '
 
               return (
-                <div className={`text-xs sm:text-sm border border-solid
-                p-2 flex items-center gap-2 justify-between rounded-lg` +
-                (isToday ? 'border-[var(--light-prime)]' : 
-                  'border-[var(--light-secondary)]') + (color == 'white' ?
-                    'text-[var(--light-prime)]' : 'text-white'
+                <div style={{background: color}} className={`text-lg sm:text-xl border 
+                  border-solid p-2 flex items-center gap-2 justify-between rounded-lg ` +
+                (isToday ? 'border-indigo-400 ' : 
+                  'border-indigo-100 ') + (color == 'white ' ?
+                    'text-indigo-400 ' : 'text-white '
                   )}
                 key={dayWeekIndex}>
-                  wwdqwq
+                  <p>{dayIndex}</p>
                 </div>
               )
             })}
