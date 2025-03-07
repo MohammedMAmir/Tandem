@@ -1,6 +1,7 @@
 import { Fugaz_One, Open_Sans, Sansita_Swashed} from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import { AuthProvider } from "@/context/AuthContext";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
@@ -46,13 +47,15 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <meta charSet="UTF-8"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <body
-        className={`w-full max-w-[1000px] mx-auto text-sm sm:text-base 
-          min-h-screen flex flex-col text-slate-800 ` + openSans.className}>
-        {header}
-        {children}
-        {footer}
-      </body>
+      <AuthProvider >
+        <body
+          className={`w-full max-w-[1000px] mx-auto text-sm sm:text-base 
+            min-h-screen flex flex-col text-slate-800 ` + openSans.className}>
+          {header}
+          {children}
+          {footer}
+        </body>
+      </AuthProvider>
     </html>
   );
 }
