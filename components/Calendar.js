@@ -1,11 +1,7 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import { gradients } from '@/utils'
 import { baseRating } from '@/utils'
-
-const data =  {
-  "15": 2, "16": 4, "17": 1, "18": 3, "19": 5,
-  "20": 2, "21": 4, "22": 1, "23": 3, "24": 5,
-}
 
 const months = {
   'January': 'Jan',
@@ -30,24 +26,25 @@ const dayList = ['Sunday', 'Monday',
 
 export default function Calendar(props) {
 
-  const { demo } = props
+  // Initialize Calendar State for setting selectedMonth and selectedYear
+  const now = new Date()
+  const currMonth = now.getMonth()
+  const [selectedMonth, setSelectedMonth] = useState(Object.keys(months)[currMonth])
+  const { demo, data, handleSetMood } = props
+  const [selectedYear, setSelectedYear] = useState(now.getFullYear())
 
-  //Initialize a year
-  const year = 2025
-  const month = 'February'
-
-  // Get the first day of every month
-  const thisMonth = new Date(year, Object.keys(months).indexOf(month), 1)
+  // Get the first day of every selectedMonth
+  const thisMonth = new Date(selectedYear, Object.keys(months).indexOf(selectedMonth), 1)
   const firstDayOfMonth = thisMonth.getDay()
 
-  // Get the last day of every month
-  const daysInMonth = new Date(year, 
-    Object.keys(months).indexOf(month) + 1, 0).getDate()
+  // Get the last day of every selectedMonth
+  const daysInMonth = new Date(selectedYear, 
+    Object.keys(months).indexOf(selectedMonth) + 1, 0).getDate()
 
-  // Find out how many days there are in every month
+  // Find out how many days there are in every selectedMonth
   const daysToDisplay = firstDayOfMonth + daysInMonth
 
-  // Get the number of weeks in every month
+  // Get the number of weeks in every selectedMonth
   const numRows = (Math.floor(daysToDisplay / 7)) + 
   (daysToDisplay % 7 ? 1 : 0)
 

@@ -1,6 +1,8 @@
+'use client'
 import { Fugaz_One, Open_Sans, Sansita_Swashed} from "next/font/google";
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Calendar from './Calendar';
+import { useAuth } from "@/context/AuthContext";
 
 const fugaz = Fugaz_One({
   subsets: ["latin"], weight: ['400'],
@@ -12,10 +14,23 @@ const sansita = Sansita_Swashed({
 
 
 export default function Dashboard() {
+  const { currentUser, userDataObj } = useAuth()
+  const [data, setData] = useState({})
+
   const statuses = {
     num_days: 14,
     time_remaining: '13:14:26',
     date: (new Date()).toDateString()
+  }
+
+  function countValues(){
+
+  }
+
+  function handleSetMood(mood){
+    // update current state
+    // update global state
+    // update firebase
   }
 
   const moods = {
@@ -25,6 +40,17 @@ export default function Dashboard() {
     'Good': '😊',
     'Elated': '😁',
   }
+
+  // codeblock that sets <data> whenever currentUser or userDataObj
+  // changes in context
+  useEffect(() => {
+    // if there is no user or user object, return in auth
+    if (!currentUser || !userDataObj){
+      return
+    } else{
+      setData(userDataObj)
+    }
+  }, [currentUser, userDataObj])
 
   return (
     <div className=' flex flex-col flex-1 gap-10 sm:gap-14 md:gap-20 '>
@@ -58,7 +84,7 @@ export default function Dashboard() {
         })}
       </div>
 
-      <Calendar />
+      <Calendar data={data} handleSetMood={handleSetMood}/>
     </div>
   )
 }
