@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import { Fugaz_One, Sansita_Swashed } from 'next/font/google'
 import Button from './Button';
 

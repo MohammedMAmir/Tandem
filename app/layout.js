@@ -1,6 +1,7 @@
 import { Fugaz_One, Open_Sans, Sansita_Swashed} from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import "../node_modules/font-awesome/css/font-awesome.min.css"
 import { AuthProvider } from "@/context/AuthContext";
 
 const openSans = Open_Sans({
