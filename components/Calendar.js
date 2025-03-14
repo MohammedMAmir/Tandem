@@ -48,6 +48,12 @@ export default function Calendar(props) {
   const numRows = (Math.floor(daysToDisplay / 7)) + 
   (daysToDisplay % 7 ? 1 : 0)
 
+  function handleIncDecMonth(val) {
+    // val can equal +1 or -1
+    // if we hit boundary of months, adjust year
+    
+  }
+
   return (
     <div className='flex flex-col overflow-hidden gap-2 '>
       {[...Array(numRows).keys()].map((row, rowIndex) => {

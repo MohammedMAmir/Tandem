@@ -15,7 +15,7 @@ const sansita = Sansita_Swashed({
 export default function Login() {
   return (
     <div className='flex flex-col flex-1 justify-center
-    items-center gap-4'>
+    items-center gap-6'>
       <h3 className={"text-4xl sm:text-5xl md:text-6xl " + 
         sansita.className}>Log In / Register</h3>
       <p>You're one step away from being in-step everyday!</p>
