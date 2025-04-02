@@ -9,10 +9,10 @@ const sansita = Sansita_Swashed({
 
 
 export default function Button(props) {
-    const { text, dark, primary, full } = props
+    const { text, dark, primary, full, clickHandler } = props
 
     return (
-    <button className={`rounded-full overflow-hidden border-2 
+    <button onClick = {clickHandler} className={`rounded-full overflow-hidden border-2 
         duration-200 hover:opacity-60 border-solid lightButton `
      + (primary ? ' lightPrimeButton' : ' lightSecButton ')
      + (full ? ' Sgrid place-items-center w-full ' : ' ')} >
