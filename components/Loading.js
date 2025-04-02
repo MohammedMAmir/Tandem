@@ -1,5 +1,6 @@
 import React from "react";
 
+// Loader page used when data is being fetched
 export default function Loading() {
   return (
     <div

@@ -30,7 +30,7 @@ export default function Login() {
   async function handleSubmit() {
     /*
     Todo:
-    - Use ReGex for password format
+    - Use Regex for password format
     - Have error messages for user feedback during password creation process
     */
 
