@@ -3,6 +3,7 @@ import "./globals.css";
 import Link from "next/link";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
 import { AuthProvider } from "@/context/AuthContext";
+import Head from "./head";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
@@ -51,8 +52,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <meta charSet="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <Head />
       <AuthProvider>
         <body
           className={

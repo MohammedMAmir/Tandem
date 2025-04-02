@@ -28,8 +28,6 @@ export default function Dashboard() {
     date: new Date().toDateString(),
   };
 
-  function countValues() {}
-
   async function handleSetMood(mood) {
     const now = new Date();
     const month = now.getMonth();
@@ -157,7 +155,7 @@ export default function Dashboard() {
         })}
       </div>
 
-      <Calendar data={data} handleSetMood={handleSetMood} />
+      <Calendar completeData={data} handleSetMood={handleSetMood} />
     </div>
   );
 }
