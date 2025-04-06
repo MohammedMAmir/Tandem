@@ -2,61 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-    --light-prime: #5a21f6;
-    --light-bold: #380dac;
-    --light-secondary: #e5d3f979;
-    --light-accent: #d3cbff;
-    --light-background: #F8F6FA;
-    --light-text: #3C3C3C;
-    --dark-prime: #c7a8fd; 
-    --dark-secondary: #7A5FA4;
-    --dark-accent: #a18eff;
-    --dark-background: #1c1530;
-    --dark-text: #e8dbff;
+:root {
+  --light-prime: #5a21f6;
+  --light-bold: #380dac;
+  --light-secondary: #e5d3f979;
+  --light-accent: #d3cbff;
+  --light-background: #f8f6fa;
+  --light-text: #3c3c3c;
+  --dark-prime: #c7a8fd;
+  --dark-secondary: #7a5fa4;
+  --dark-accent: #a18eff;
+  --dark-background: #1c1530;
+  --dark-text: #e8dbff;
 }
 
-.textGradientPrime{
-    background: -webkit-linear-gradient(#5a21f6, #7645fd);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.textGradientPrime {
+  background: -webkit-linear-gradient(#5a21f6, #7645fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.textGradientSec{
-    background: -webkit-linear-gradient(#BCA0DC, #F4F0F7);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.textGradientSec {
+  background: -webkit-linear-gradient(#bca0dc, #f4f0f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.lightButton{
-    border-color: var(--light-prime);
+.lightButton {
+  border-color: var(--light-prime);
 }
 
-.lightPrimeButton{
-    color: white;
-    background: var(--light-prime);
+.lightPrimeButton {
+  color: white;
+  background: var(--light-prime);
 }
 
-.lightSecButton{
-    color: var(--light-prime);
+.lightSecButton {
+  color: var(--light-prime);
 }
 
-.lightInput{
-    border: solid 2px;
-    border-color: var(--light-secondary);
-    border-radius: 24px;
-    outline: none;
+.lightInput {
+  border: solid 2px;
+  border-color: var(--light-secondary);
+  border-radius: 24px;
+  outline: none;
 }
 
-.lightInput:hover, .lightInput:focus{
-    border-color: var(--light-prime);
+.lightInput:hover,
+.lightInput:focus {
+  border-color: var(--light-prime);
 }
 
-.purpleShadow{
-    box-shadow: 3px 3px 3px 1px var(--light-accent);
+.purpleShadow {
+  box-shadow: 3px 3px 3px 1px var(--light-accent);
 }
 
-.purpleShadow:hover{
-    transform: translate(3px, 3px);
-    box-shadow: 0px 0px 1px 1px var(--light-accent);
+.purpleShadow:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px 1px 1px var(--light-accent);
 }
