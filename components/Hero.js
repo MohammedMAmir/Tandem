@@ -2,6 +2,7 @@ import React from "react";
 import { Fugaz_One, Sansita_Swashed } from "next/font/google";
 import Button from "./Button";
 import Calendar from "./Calendar";
+import CallToAction from "./CallToAction";
 
 const fugaz = Fugaz_One({
   subsets: ["latin"],
@@ -44,10 +45,7 @@ export default function Hero() {
         <span className="font-semibold"> photos</span>, and
         <span className="font-semibold"> more</span>!
       </p>
-      <div className="grid grid-cols-2 gap-4 w-fit mx-auto">
-        <Button text="Sign Up" />
-        <Button text="Login" primary />
-      </div>
+      <CallToAction />  
       <Calendar demo />
     </div>
   );
