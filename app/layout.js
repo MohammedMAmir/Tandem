@@ -4,6 +4,7 @@ import Link from "next/link";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
 import { AuthProvider } from "@/context/AuthContext";
 import Head from "./head";
+import Logout from "@/components/Logout";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
@@ -40,7 +41,7 @@ export default function RootLayout({ children }) {
           </h1>
         </div>
       </Link>
-      <div className="flex items-center justify-between ">PLACEHOLDER</div>
+      <Logout />
     </header>
   );
 
